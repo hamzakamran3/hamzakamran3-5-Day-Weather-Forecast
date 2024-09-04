@@ -1,0 +1,158 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    max-height: 90vh;
+}
+
+#city-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+#weather-container {
+    overflow-x: auto; 
+    margin-top: 20px;
+    padding: 10px 0;
+    max-height: auto; 
+    width: 100%;
+}
+
+#weather-result {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; 
+}
+
+.weather-day {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: #fff;
+    min-width: 150px;
+    flex: 0 0 auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.weather-day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.weather-day.sunny {
+    background-color: #ffeb3b; 
+}
+
+.weather-day.cloudy {
+    background-color: #9e9e9e;
+}
+
+.weather-day.rain {
+    background-color: #2196f3; 
+}
+
+.weather-day.warm {
+    background-color: #ff7043; 
+}
+
+.weather-day h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.weather-day.sunny i {
+    color: #ffc107; 
+}
+
+.weather-day.cloudy i {
+    color: #d3d3d3 
+}
+
+.weather-day.rain i {
+    color: #2196f3; 
+}
+
+.weather-day.warm i {
+    color: #ff5722; 
+}
+
+#current-weather {
+    background-color: #00bcd4; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px;
+}
+
+#current-weather h2 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+#current-weather p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* For mobile users*/
+@media (max-width: 600px) {
+    #app {
+        width: 90%;
+    }
+
+    .weather-day {
+        min-width: 120px;
+        font-size: 0.8em;
+    }
+
+    .weather-day i {
+        font-size: 2em;
+    }
+}
+
+.weather-day p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #555; 
+}
